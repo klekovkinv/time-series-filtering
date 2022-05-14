@@ -15,7 +15,7 @@ class IdenticalTimeSeriesFilter(BaseTimeSeriesFilter):
         return data
 
 
-class MeanTimeSeriesFilter(BaseTimeSeriesFilter):
+class MovingAverageFilter(BaseTimeSeriesFilter):
     def __init__(self, filter_window_size):
         self.queue = deque(maxlen=filter_window_size)
 
@@ -60,15 +60,21 @@ class OneEuroFilter(BaseTimeSeriesFilter):
         self.derivative_low_pass_filter = ExponentialMovingAverageFilter(
             self.get_alpha(self.derivative_cutoff_frequency))
         self.prev_data = None
+        self.prev_timestamp = None
 
     def get_alpha(self, cutoff_frequency):
-        te = 1.0 / self.data_frequency
-        tau = 1.0 / (2 * np.pi * cutoff_frequency)
-        return 1.0 / (1.0 + tau / te)
+        te = 1 / self.data_frequency
+        tau = 1 / (2 * np.pi * cutoff_frequency)
+        return 1 / (1 + tau / te)
 
-    def __call__(self, data):
+    def __call__(self, data, timestamp=None):
+        if self.prev_timestamp and timestamp:
+            self.data_frequency = 1 / (timestamp - self.prev_timestamp)
         derivative = 0.0 if self.prev_data is None else (data - self.prev_data) * self.data_frequency
+
         self.prev_data = data
+        self.prev_timestamp = timestamp
+
         derivative_estimation = self.derivative_low_pass_filter(derivative,
                                                                 alpha=self.get_alpha(self.derivative_cutoff_frequency))
         # use it to update the cutoff frequency
