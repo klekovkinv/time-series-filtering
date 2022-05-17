@@ -10,11 +10,6 @@ class BaseTimeSeriesFilter(ABC):
         pass
 
 
-class IdenticalTimeSeriesFilter(BaseTimeSeriesFilter):
-    def __call__(self, data):
-        return data
-
-
 class MovingAverageFilter(BaseTimeSeriesFilter):
     def __init__(self, filter_window_size):
         self.queue = deque(maxlen=filter_window_size)
