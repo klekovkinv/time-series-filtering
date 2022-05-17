@@ -1,16 +1,9 @@
-from abc import ABC, abstractmethod
 from collections import deque
 
 import numpy as np
 
 
-class BaseTimeSeriesFilter(ABC):
-    @abstractmethod
-    def __call__(self, *args, **kwargs):
-        pass
-
-
-class MovingAverageFilter(BaseTimeSeriesFilter):
+class MovingAverageFilter:
     def __init__(self, filter_window_size):
         self.queue = deque(maxlen=filter_window_size)
 
@@ -19,7 +12,7 @@ class MovingAverageFilter(BaseTimeSeriesFilter):
         return np.mean(self.queue, axis=0)
 
 
-class ExponentialMovingAverageFilter(BaseTimeSeriesFilter):
+class ExponentialMovingAverageFilter:
     def __init__(self, alpha):
         if not (0 < alpha < 1):
             print('Parameter alpha should be in range (0, 1)')
@@ -37,7 +30,7 @@ class ExponentialMovingAverageFilter(BaseTimeSeriesFilter):
         return self.prev
 
 
-class OneEuroFilter(BaseTimeSeriesFilter):
+class OneEuroFilter:
     """
     https://cristal.univ-lille.fr/~casiez/1euro/
     """
