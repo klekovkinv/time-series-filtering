@@ -10,31 +10,31 @@ This repository contains code for this medium blog-post ([link](http://)).
 #### Moving Average filter
 
 <p>
-<img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/Formula1.png" width="400" height="80">
+<img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/Formula1.png" width="450" height="80">
 <p/>
 
 #### Exponential Moving Average filter
 
 <p>
-<img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/Formula2.png" width="400" height="80">
+<img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/Formula2.png" width="450" height="80">
 <p/>
 
 #### One Euro filter
 
 <p>
-<img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/Formula3.png" width="400" height="80">
+<img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/Formula3.png" width="450" height="80">
 <p/>
 
 <p>
-<img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/Formula4.png" width="400" height="80">  
+<img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/Formula4.png" width="450" height="80">  
 <p/>
 
 <p>
-<img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/Formula5.png" width="400" height="80">  
+<img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/Formula5.png" width="450" height="80">  
 <p/>
 
 <p>
-<img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/Formula6.png" width="400" height="80">
+<img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/Formula6.png" width="450" height="80">
 <p/>
 
 #### Data and filters visualization
