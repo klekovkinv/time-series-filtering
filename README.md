@@ -5,7 +5,7 @@ Here we consider the following filtering algorithms:
 * Exponential Moving Average filter
 * One Euro filter  
 
-This repository contains code for this medium blog-post ([link](http://)).
+This repository contains code for the medium blog-post ([link](http://)).
 
 #### Moving Average filter
 
@@ -58,3 +58,6 @@ One euro filter
 <p>
     <img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/one-euro-f_cmin-0.3-beta-0.07.png" width="600" height="320">
 <p/>
+
+
+All visualizations are in this file: `./visualize_filters.ipynb`
