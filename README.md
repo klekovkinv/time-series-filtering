@@ -1,63 +1,33 @@
-# Time series filtering
+# Time series filtering algorithms
 
-Here we consider the following filtering algorithms:
-* Moving Average filter
-* Exponential Moving Average filter
-* One Euro filter  
+Here we consider the following algorithms:
+* Moving Average
+* Exponential Moving Average
+* One Euro 
 
-This repository contains code for the medium blog-post ([link](http://)).
-
-#### Moving Average filter
-
-<p>
-<img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/Formula1.png" width="450" height="80">
-<p/>
-
-#### Exponential Moving Average filter
-
-<p>
-<img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/Formula2.png" width="450" height="80">
-<p/>
-
-#### One Euro filter
-
-<p>
-<img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/Formula3.png" width="450" height="80">
-<p/>
-
-<p>
-<img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/Formula4.png" width="450" height="80">  
-<p/>
-
-<p>
-<img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/Formula5.png" width="450" height="80">  
-<p/>
-
-<p>
-<img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/Formula6.png" width="450" height="80">
-<p/>
+This repository contains code for the Medium post, there you can read about filtering algorithms ([link](http://)).
 
 #### Data and filters visualization
+To visualize algorithms we took 450 points on the interval [0, 15],  
+calculated a sinusoid on them (original data) and added Gaussian noise to it (noisy data).  
+For each filtering algorithm, we filter the noisy data and visualize the resulting signal   
+along with the original and the noisy sine wave.   
 
-Data:
-<p>
-    <img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/data.png" width="600" height="320">
-<p/>
-
-Moving Average filter
+Operation of moving average filter:
 <p>
     <img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/moving-average-w-50.png" width="600" height="320">
 <p/>
 
-Exponential Moving Average filter
+Operation of exponential moving average filter:
 <p>
     <img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/exponential-moving-average-alpha-0.05.png" width="600" height="320">
 <p/>
 
-One euro filter
+Operation of one euro filter:
 <p>
     <img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/one-euro-f_cmin-0.3-beta-0.07.png" width="600" height="320">
 <p/>
 
 
-All visualizations are in this file: `./visualize_filters.ipynb`
+All visualizations are in this file: `./visualize_filters.ipynb`  
+Implementation of algorithms: `src/time_series_filtering.py`  
