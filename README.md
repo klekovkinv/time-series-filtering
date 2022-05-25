@@ -1,11 +1,12 @@
 # Time series filtering algorithms
 
 Here we consider the following algorithms:
-* Moving Average
-* Exponential Moving Average
+* Moving average
+* Exponential moving average
 * One Euro 
 
-This repository contains code for the Medium post, there you can read about filtering algorithms ([link](http://)).
+This repository contains code for the Medium post, there you can read about filtering algorithms 
+([link](https://medium.com/deelvin-machine-learning/time-series-filtering-algorithms-a-brief-overview-af2d3112cd03)).
 
 #### Data and filters visualization
 To visualize algorithms we took 450 points on the interval [0, 15],  
@@ -23,7 +24,7 @@ Operation of exponential moving average filter:
     <img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/exponential-moving-average-alpha-0.05.png" width="600" height="320">
 <p/>
 
-Operation of one euro filter:
+Operation of one Euro filter:
 <p>
     <img src="https://raw.githubusercontent.com/klekovkinv/time-series-filtering/main/images/one-euro-f_cmin-0.3-beta-0.07.png" width="600" height="320">
 <p/>
